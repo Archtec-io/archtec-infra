@@ -108,3 +108,10 @@ jobs:
         repo: unified_inventory
         branch: master
         token: ${{ secrets.BOT_KEY }}
+
+    - name: xdecor
+      run: ./merge.sh
+      env:
+        repo: xdecor
+        branch: master
+        token: ${{ secrets.BOT_KEY }}
