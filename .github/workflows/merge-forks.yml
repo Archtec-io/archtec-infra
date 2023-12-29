@@ -112,6 +112,6 @@ jobs:
     - name: xdecor
       run: ./merge.sh
       env:
-        repo: xdecor
+        repo: xdecor-libre
         branch: master
         token: ${{ secrets.BOT_KEY }}
