@@ -92,16 +92,22 @@ jobs:
         repo: pkarcs
         branch: master
 
-    - name: xban2
+    - name: streets
       run: ./merge.sh
       env:
-        repo: xban2
-        branch: master
+        repo: streets
+        branch: main
 
     - name: unified_inventory
       run: ./merge.sh
       env:
         repo: unified_inventory
+        branch: master
+
+    - name: xban2
+      run: ./merge.sh
+      env:
+        repo: xban2
         branch: master
 
     - name: xdecor
