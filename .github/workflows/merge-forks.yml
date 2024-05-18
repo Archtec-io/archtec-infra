@@ -50,6 +50,18 @@ jobs:
         repo: darkage
         branch: master
 
+    - name: default
+      run: ./merge.sh
+      env:
+        repo: default
+        branch: master
+
+    - name: doors
+      run: ./merge.sh
+      env:
+        repo: doors
+        branch: master
+
     - name: ethereal
       run: ./merge.sh
       env:
@@ -66,12 +78,6 @@ jobs:
       run: ./merge.sh
       env:
         repo: greek
-        branch: master
-
-    - name: minetest_game
-      run: ./merge.sh
-      env:
-        repo: minetest_game
         branch: master
 
     - name: moreblocks
