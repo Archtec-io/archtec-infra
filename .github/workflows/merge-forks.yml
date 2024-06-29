@@ -32,6 +32,12 @@ jobs:
         repo: auroras
         branch: master
 
+    - name: bike
+      run: ./merge.sh
+      env:
+        repo: bike
+        branch: master
+
     - name: bones
       run: ./merge.sh
       env:

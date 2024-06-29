@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '0 0 * * *'
 
+env:
+  token: ${{ secrets.BOT_KEY }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,10 +14,16 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: bike
+      run: ./mirror.sh
+      env:
+        source_repo: https://gitlab.com/h2mm/bike.git
+        github_repo: bike_mirror.git
+        branch: master
+
     - name: ta_apiary
       run: ./mirror.sh
       env:
         source_repo: https://gitlab.com/lesya_minetest_mods/ta_apiary.git
         github_repo: ta_apiary.git
         branch: main
-        access_token: ${{ secrets.BOT_KEY }}
