@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # full github url
-GITHUB_REPO_URL=https://${access_token}@github.com/Archtec-io/${github_repo}
+GITHUB_REPO_URL=https://${token}@github.com/Archtec-io/${github_repo}
 
 # fetch commit-checksums
 LOCAL_SHA=$(git ls-remote "${GITHUB_REPO_URL}" "${branch}" | cut -f1)
