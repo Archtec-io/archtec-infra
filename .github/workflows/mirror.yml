@@ -1,4 +1,4 @@
-name: gitlab-mirror
+name: mirror
 
 on:
   schedule:
@@ -27,3 +27,10 @@ jobs:
         source_repo: https://gitlab.com/lesya_minetest_mods/ta_apiary.git
         github_repo: ta_apiary.git
         branch: main
+    
+    - name: morelights_dim
+      run: ./mirror.sh
+      env:
+        source_repo: https://invent.kde.org/davidhurka/doxy_morelights_dim.git
+        github_repo: morelights_dim.git
+        branch: master
