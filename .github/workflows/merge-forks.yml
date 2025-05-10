@@ -110,6 +110,12 @@ jobs:
         repo: pkarcs
         branch: master
 
+    - name: replacer
+      run: ./merge.sh
+      env:
+        repo: replacer
+        branch: main
+
     - name: streets
       run: ./merge.sh
       env:
